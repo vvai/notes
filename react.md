@@ -28,3 +28,21 @@ Greeting.defaultProps = {
   name: "Guest"
 }
 ```
+
+## Conditional rendering techniques
+
+```javascript
+function render() {
+  return condition && <span>Rendered when `truthy`</span>
+}
+function render() {
+  return condition ? <span>Rendered when `truthy`</span> : <span>Rendered when `falsey`</span>
+}
+function render() {
+  return condition ? (
+    <span>Rendered when `truthy`</span>
+  ) : (
+    <span>Rendered when `falsey`</span>
+  )
+}
+```
