@@ -14,3 +14,17 @@ this.setState((prevState, props) => ({
 }));
 ```
 This is basically a reducer, where `prevState` acts like an accumulator, and `props` acts as the source for the new update data. Like reducers from Redux, you can reduce with this function using any standard reduce utility (including `Array.prototype.reduce()`). Also like Redux, the reducer should be a pure function.
+
+## Stateless components
+
+```javascript
+const Greeting = ({ name }, context) =>
+  <div style={context.style}>{name}</div>;
+
+Greeting.propTypes = {
+  name: PropTypes.string.isRequired
+}
+Greeting.defaultProps = {
+  name: "Guest"
+}
+```
